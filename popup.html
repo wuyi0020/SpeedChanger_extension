@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Speed Controller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 15px;
+      padding: 0;
+      width: 250px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto; /* 調整容器的高度 */
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+
+    .input-wrapper input[type="text"] {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .input-wrapper button {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .speed-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      width: 200px;
+      justify-content:space-between;
+      margin-bottom: 20px;
+    }
+
+    .speed-buttons button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="speed-buttons">
+      <button id="btn-0.5">0.5x</button>
+      <button id="btn-0.75">0.75x</button>
+      <button id="btn-1.0">1.0x</button>
+      <button id="btn-1.25">1.25x</button>
+      <button id="btn-1.5">1.5x</button>
+      <button id="btn-1.75">1.75x</button>
+      <button id="btn-2.0">2.0x</button>
+      <button id="btn-3.0">3.0x</button>
+    </div>
+    <div class="input-wrapper">
+      <button id="decrease-speed">--</button>
+      <input type="text" id="speed-input" value="1.00">
+      <button id="increase-speed">++</button>
+    </div>
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+  <script src="popupScript.js"></script>
+</body>
+</html>
